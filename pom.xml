@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>uu-thread-basic</module>
+        <module>uu-thread-core</module>
     </modules>
 
 
