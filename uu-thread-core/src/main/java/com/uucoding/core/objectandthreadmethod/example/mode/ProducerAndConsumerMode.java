@@ -80,7 +80,7 @@ public class ProducerAndConsumerMode {
      */
     static class Producer implements Runnable {
 
-        private StorageQueue storageQueue;
+        StorageQueue storageQueue;
 
         public Producer(StorageQueue storageQueue) {
             this.storageQueue = storageQueue;
@@ -99,7 +99,7 @@ public class ProducerAndConsumerMode {
      */
     static class Consumer implements Runnable {
 
-        private StorageQueue storageQueue;
+        StorageQueue storageQueue;
 
         public Consumer(StorageQueue storageQueue) {
             this.storageQueue = storageQueue;
