@@ -41,6 +41,8 @@ public class WaitNotifyAll implements Runnable {
                 object.notifyAll();
                 // 将notifyAll 换成notify此时只会随机唤醒其中一个线程，另一个线程始终无法执行
 //                object.notify();
+                // 查看此时线程A和B的状态，会从waiting进入blocked状态
+                System.out.println(threadA.getState());
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
