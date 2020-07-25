@@ -10,7 +10,7 @@ package com.uucoding.core.objectandthreadmethod;
  * @version : v1.0
  * @Date 2020/7/25  16:46
  */
-public class WaitNotifyAll implements Runnable {
+public class ObjectWaitNotifyAll implements Runnable {
 
     private static Object object = new Object();
 
@@ -31,8 +31,8 @@ public class WaitNotifyAll implements Runnable {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Thread threadA = new Thread(new WaitNotifyAll(), "threadA");
-        Thread threadB = new Thread(new WaitNotifyAll(), "threadB");
+        Thread threadA = new Thread(new ObjectWaitNotifyAll(), "threadA");
+        Thread threadB = new Thread(new ObjectWaitNotifyAll(), "threadB");
 
         Thread threadC = new Thread(() -> {
             synchronized (object) {

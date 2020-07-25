@@ -1,4 +1,4 @@
-package com.uucoding.core.objectandthreadmethod.example.mode;
+package com.uucoding.core.objectandthreadmethod.example;
 
 import java.util.LinkedList;
 

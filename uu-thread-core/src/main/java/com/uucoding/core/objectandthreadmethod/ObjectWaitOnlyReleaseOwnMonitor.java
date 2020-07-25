@@ -7,7 +7,7 @@ package com.uucoding.core.objectandthreadmethod;
  * @version : v1.0
  * @Date 2020/7/25  19:49
  */
-public class WaitOnlyReleaseOwnMonitor {
+public class ObjectWaitOnlyReleaseOwnMonitor {
 
     private static Object lockA = new Object();
     private static Object lockB = new Object();
