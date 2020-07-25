@@ -86,6 +86,9 @@ public class ProducerAndConsumerMode {
             this.storageQueue = storageQueue;
         }
 
+        /**
+         * 生产100个数据
+         */
         @Override
         public void run() {
             for (int i = 0; i < 100; i++) {
@@ -106,7 +109,7 @@ public class ProducerAndConsumerMode {
         }
 
         /**
-         * 消费一千个产品
+         * 消费一百个数据
          */
         @Override
         public void run() {
