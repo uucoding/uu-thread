@@ -28,17 +28,18 @@ public class ThreadPoolUncaughtException {
         });
         return thread;
     });
-    private  static  Object object = new Object();
 
     public static void main(String[] args) throws Exception {
         List<Future<Integer>> list = new ArrayList<>();
         long start = System.currentTimeMillis();
         int count = 0;
         for (int i = 0; i < 2000; i++) {
-            // 队列数据超过490个的时候，休眠一秒消耗一下，否则队列的数据直接塞满报错
+
             if (linkedBlockingQueue.size() == 490) {
                 Thread.sleep(1000);
             }
+            // 队列数据超过498个的时候，循环等待消耗，否则队列的数据直接塞满报错：java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@7e6eef21 rejected from java.util.concurrent.ThreadPoolExecutor@8d03460
+            while(executor.getQueue().size() > 498) {}
             int finalI = i;
             Future<Integer> submit = executor.submit(() -> {
                 System.out.println(Thread.currentThread().getName() + "  " + finalI + "..." + linkedBlockingQueue.size());
