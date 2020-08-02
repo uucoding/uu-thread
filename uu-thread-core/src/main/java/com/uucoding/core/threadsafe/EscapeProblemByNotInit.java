@@ -3,7 +3,7 @@ package com.uucoding.core.threadsafe;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 逸出问题之：
+ * 逸出问题之：在构造函数中未初始化完毕就this赋值
  *
  * @author : uu
  * @version : v1.0
