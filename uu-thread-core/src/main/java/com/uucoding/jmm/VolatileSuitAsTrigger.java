@@ -25,9 +25,10 @@ public class VolatileSuitAsTrigger {
 
     public void read() {
         // 当volatile 修饰的c == 0的时候， c之前的操作一定是可见的
-        if (c == 0) {
-            System.out.println("a=" + a + ", b=" + b);
+        while (c != 0) {
+            continue;
         }
+        System.out.println("a=" + a + ", b=" + b);
     }
 
     public static void main(String[] args) {
