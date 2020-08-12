@@ -8,11 +8,8 @@ package com.uucoding.jmm;
  * @Date 2020/8/2  22:40
  */
 public class VolatileSuitAsTrigger {
-
     int a = 1;
-
     int b = 2;
-
     volatile int c = 3;
 
     public void write() {
