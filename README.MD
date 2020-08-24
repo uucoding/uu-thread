@@ -1,8 +1,9 @@
-### 线程学习示例
+# 线程学习示例
 
-### uu-thread-basic
+## uu-thread-basic
 > 该模块主要演示基本的线程概念
-### uu-thread-core
+
+## uu-thread-core
 > 该模块为线程核心模块
 
 #### core包
@@ -20,8 +21,17 @@
 #### jmm包
 > 包括JMM内存模型相关案例
 
-### singleton包
+#### singleton包
 > 包括单例的八种写法的演变，以及最佳生产实践案例
->
-### deadlock包
+
+#### deadlock包
 > 包括常见的转账、哲学家就餐等常见死锁问题，以及相关的修复方案
+
+#### synchronized_包
+> synchronized关键字相关案例
+
+## uu-thread-juc
+> 该模块为常用并发工具包案例
+
+- threadpool: 线程池相关案例
+- threadlocal: threadlocal相关案例代码
